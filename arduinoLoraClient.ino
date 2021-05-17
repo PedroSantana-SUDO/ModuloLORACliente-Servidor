@@ -15,7 +15,7 @@ void setup()
 void loop()
 {
   Serial.println("Mandando mensaje desde el cliente");
-  uint8_t data[] = "Mensaje del cliente";
+  uint8_t data[] = "Mensaje del cliente"; //Mensaje que se va a enviar al servidor
   rf95.send(data, sizeof(data));
   rf95.waitPacketSent();
   // Se espera una respuesta
